@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YMAddressPickerView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNk-tv-U4J">
+                    <rect key="frame" x="0.0" y="456" width="375" height="211"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-xc-BlX">
+                            <rect key="frame" x="0.0" y="49" width="375" height="162"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="162" id="u6U-rQ-6EN"/>
+                            </constraints>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWK-Jh-3rr">
+                            <rect key="frame" x="275" y="15" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="6fP-6d-JaR"/>
+                                <constraint firstAttribute="height" constant="40" id="UsE-e7-Bj8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="1" green="0.25882352941176467" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="submmitBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="dQ2-QS-F5Z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="kaO-xc-BlX" secondAttribute="bottom" id="1HQ-Yy-A9N"/>
+                        <constraint firstAttribute="trailing" secondItem="kaO-xc-BlX" secondAttribute="trailing" id="LFH-ex-Zr1"/>
+                        <constraint firstAttribute="height" constant="211" id="Nc0-6w-hbC"/>
+                        <constraint firstItem="kaO-xc-BlX" firstAttribute="leading" secondItem="QNk-tv-U4J" secondAttribute="leading" id="ObB-f3-mHp"/>
+                        <constraint firstItem="HWK-Jh-3rr" firstAttribute="top" secondItem="QNk-tv-U4J" secondAttribute="top" constant="15" id="eCx-Lg-Bqi"/>
+                        <constraint firstAttribute="trailing" secondItem="HWK-Jh-3rr" secondAttribute="trailing" constant="20" id="n1T-au-PwG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.29826626712328769" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QNk-tv-U4J" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Jlx-Wf-of9"/>
+                <constraint firstItem="QNk-tv-U4J" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aLd-eM-GI6"/>
+                <constraint firstItem="QNk-tv-U4J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ltj-hx-q8Y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="pickerView" destination="kaO-xc-BlX" id="wNx-3P-pV4"/>
+            </connections>
+            <point key="canvasLocation" x="-862" y="29"/>
+        </view>
+    </objects>
+</document>
